@@ -66,6 +66,12 @@ pushd lora_gateway
 cp ./libloragw/99-libftdi.rules /etc/udev/rules.d/99-libftdi.rules
 cp $SCRIPT_DIR/loragw_spi.ftdi.c ./libloragw/src/
 cp $SCRIPT_DIR/Makefile-gw-lib ./libloragw/Makefile
+cp $SCRIPT_DIR/Makefile-lbt-test ./util_lbt_test/Makefile
+cp $SCRIPT_DIR/Makefile-pkt-logger ./util_pkt_logger/Makefile
+cp $SCRIPT_DIR/Makefile-spectral-scan ./util_spectral_scan/Makefile
+cp $SCRIPT_DIR/Makefile-spi-stress ./util_spi_stress/Makefile
+cp $SCRIPT_DIR/Makefile-tx-continuous ./util_tx_continuous/Makefile
+cp $SCRIPT_DIR/Makefile-tx-test ./util_tx_test/Makefile
 cp $SCRIPT_DIR/library.cfg ./libloragw/
 cp $SCRIPT_DIR/Makefile-gw ./Makefile
 
