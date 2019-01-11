@@ -2,6 +2,8 @@
 
 based on the latest SX1301 driver [lora_gateway](https://github.com/Lora-net/lora_gateway) v5.0.1 and semtech [packet_forwarder](https://github.com/Lora-net/packet_forwarder) v4.0.1  
 
+Note: This project is only used for USB interface of RAK833 + Raspberry Pi, if you want to use SPI interface of RAK833 + Raspberry Pi, please use this project:
+https://github.com/RAKWireless/RAK831-LoRaGateway-RPi 
 
 ##	Installation procedure
 
