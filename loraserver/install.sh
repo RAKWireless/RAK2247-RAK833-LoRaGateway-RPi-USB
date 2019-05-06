@@ -6,6 +6,8 @@ if [ $(id -u) -ne 0 ]; then
   exit 1
 fi
 
+set -e
+
 # Try to get gateway ID from MAC address
 # First try eth0, if that does not exist, try wlan0 (for RPi Zero)
 GATEWAY_EUI_NIC="eth0"
@@ -33,7 +35,7 @@ sudo -u postgres psql -c "create role loraserver_ns with login password 'dbpassw
 sudo -u postgres psql -c "create database loraserver_as with owner loraserver_as;"
 sudo -u postgres psql -c "create database loraserver_ns with owner loraserver_ns;;"
 sudo -u postgres psql loraserver_as -c "create extension pg_trgm;"
-sudo -u postgres psql -U postgres -f all.sql
+sudo -u postgres psql -U postgres -f init_sql.sql
 
 #3. install lora packages
 #3.1 install https requirements

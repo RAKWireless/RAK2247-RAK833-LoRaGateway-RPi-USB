@@ -5,6 +5,8 @@ if [ $(id -u) -ne 0 ]; then
   exit 1
 fi
 
+set -e
+
 apt-get install util-linux procps hostapd iproute2 iw haveged dnsmasq
 
 if [ ! -d create_ap ]; then

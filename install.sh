@@ -22,6 +22,8 @@ pushd ap
 ./install.sh
 popd
 
-echo "Please reboot your system."
+echo "******************************"
+echo "* Please reboot your system. *"
+echo "******************************"
 sleep 3
 #shutdown -r now

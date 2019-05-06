@@ -115,7 +115,8 @@ cp rak-version* /usr/bin/
 cp gateway-config /usr/bin/
 
 # Start packet forwarder as a service
-cp ./start.sh $INSTALL_DIR/bin/
+cp ./start.sh $INSTALL_DIR/packet_forwarder/lora_pkt_fwd/
+cp ./set_eui.sh $INSTALL_DIR/packet_forwarder/lora_pkt_fwd/
 cp $SCRIPT_DIR/ttn-gateway.service /lib/systemd/system/
 systemctl enable ttn-gateway.service
 
