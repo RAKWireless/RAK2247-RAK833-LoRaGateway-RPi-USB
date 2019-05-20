@@ -1,4 +1,4 @@
-# RAK833-LoRaGateway-RPi
+# RAK2247&RAK833-LoRaGateway-RPi-USB
 
 based on the latest SX1301 driver [lora_gateway](https://github.com/Lora-net/lora_gateway) v5.0.1 and semtech [packet_forwarder](https://github.com/Lora-net/packet_forwarder) v4.0.1  
 
