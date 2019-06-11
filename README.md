@@ -3,7 +3,7 @@
 based on the latest SX1301 driver [lora_gateway](https://github.com/Lora-net/lora_gateway) v5.0.1 and semtech [packet_forwarder](https://github.com/Lora-net/packet_forwarder) v4.0.1  
 
 Note: This project is only used for USB interface of RAK833 + Raspberry Pi, if you want to use SPI interface of RAK833 + Raspberry Pi, please use this project:
-https://github.com/RAKWireless/RAK831-LoRaGateway-RPi. But you should notice the reset GPIO pin definition which is the value of SX1301_RESET_BCM_PIN macro in the start.sh file, it is pin17 now, and you can modify this value according to your hardware.
+https://github.com/RAKWireless/RAK2245-RAK831-LoRaGateway-RPi-Raspbian-OS. But you should notice the reset GPIO pin definition which is the value of SX1301_RESET_BCM_PIN macro in the start.sh file, it is pin17 now, and you can modify this value according to your hardware.
 
 ##	Supported platforms
 
