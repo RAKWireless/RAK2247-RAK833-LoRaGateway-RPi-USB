@@ -93,7 +93,6 @@ pushd packet_forwarder
 
 cp $SCRIPT_DIR/Makefile-pk ./lora_pkt_fwd/Makefile
 cp $SCRIPT_DIR/update_gwid.sh ./lora_pkt_fwd/update_gwid.sh
-cp lora_conf/serial/global_conf.eu_863_870.json ./lora_pkt_fwd/global_conf.json
 
 make
 
@@ -115,6 +114,8 @@ echo "Installation completed."
 #
 cd $SCRIPT_DIR
 cp lora_conf /etc/ -rf
+cp lora_conf/serial/global_conf.eu_863_870.json $INSTALL_DIR/packet_forwarder/lora_pkt_fwd/global_conf.json
+sed -i "s/^.*server_address.*$/\t\"server_address\": \"127.0.0.1\",/" /opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/global_conf.json
 cp gateway-version* /usr/bin/
 cp gateway-config /usr/bin/
 
