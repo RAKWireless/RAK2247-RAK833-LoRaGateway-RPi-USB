@@ -6,8 +6,6 @@ if [ $(id -u) -ne 0 ]; then
   exit 1
 fi
 
-set -e
-
 # Try to get gateway ID from MAC address
 # First try eth0, if that does not exist, try wlan0 (for RPi Zero)
 GATEWAY_EUI_NIC="eth0"

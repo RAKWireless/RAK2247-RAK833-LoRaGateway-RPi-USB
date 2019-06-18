@@ -22,6 +22,10 @@ pushd ap
 ./install.sh
 popd
 
+pushd sysconf
+./install.sh
+popd
+
 echo "******************************"
 echo "* Please reboot your system. *"
 echo "******************************"

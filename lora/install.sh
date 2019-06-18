@@ -21,6 +21,8 @@ echo "Version $VERSION"
 # or rely on the gateway EUI and retrieve settings files from remote (recommended)
 echo "Gateway configuration:"
 
+if [ ! -d "/usr/local/rak/gateway-config-info" ]; then mkdir "/usr/local/rak/gateway-config-info" -p ; fi
+
 # Try to get gateway ID from MAC address
 # First try eth0, if that does not exist, try wlan0 (for RPi Zero)
 GATEWAY_EUI_NIC="eth0"
@@ -90,6 +92,8 @@ fi
 pushd packet_forwarder
 
 cp $SCRIPT_DIR/Makefile-pk ./lora_pkt_fwd/Makefile
+cp $SCRIPT_DIR/update_gwid.sh ./lora_pkt_fwd/update_gwid.sh
+cp lora_conf/serial/global_conf.eu_863_870.json ./lora_pkt_fwd/global_conf.json
 
 make
 
@@ -100,7 +104,7 @@ LOCAL_CONFIG_FILE=$INSTALL_DIR/packet_forwarder/lora_pkt_fwd/local_conf.json
 
 #config local_conf.json
 
-    echo -e "{\n\t\"gateway_conf\": {\n\t\t\"gateway_ID\": \"$GATEWAY_EUI\",\n\t\t\"serv_port_up\": 1700,\n\t\t\"serv_port_down\": 1700,\n\t\t\"serv_enabled\": true,\n\t\t\"ref_latitude\": 0,\n\t\t\"ref_longitude\": 0,\n\t\t\"ref_altitude\": 0 \n\t}\n}" >$LOCAL_CONFIG_FILE
+    echo -e "{\n\t\"gateway_conf\": {\n\t\t\"gateway_ID\": \"$GATEWAY_EUI\" \n\t}\n}" >$LOCAL_CONFIG_FILE
 
 echo "Gateway EUI is: $GATEWAY_EUI"
 echo "The hostname is: $NEW_HOSTNAME"
@@ -111,7 +115,7 @@ echo "Installation completed."
 #
 cd $SCRIPT_DIR
 cp lora_conf /etc/ -rf
-cp rak-version* /usr/bin/
+cp gateway-version* /usr/bin/
 cp gateway-config /usr/bin/
 
 # Start packet forwarder as a service

@@ -718,7 +718,7 @@ COPY public.device_profile (device_profile_id, network_server_id, organization_i
 --
 
 COPY public.gateway (mac, created_at, updated_at, name, description, organization_id, ping, last_ping_id, last_ping_sent_at, network_server_id, gateway_profile_id) FROM stdin;
-\\xB827EBFFFEE8A9F8	2019-04-12 03:34:03.122543+00	2019-04-12 03:38:39.312415+00	GwModel	GwModel	1	f	\N	\N	1	\N
+\\x0000000000000888	2019-04-12 03:34:03.122543+00	2019-04-12 03:38:39.312415+00	GwModel	GwModel	1	f	\N	\N	1	\N
 \.
 
 
@@ -2069,7 +2069,7 @@ SELECT pg_catalog.setval('public.device_queue_id_seq', 1, false);
 --
 
 COPY public.gateway (gateway_id, created_at, updated_at, first_seen_at, last_seen_at, location, altitude, gateway_profile_id) FROM stdin;
-\\xB827EBFFFEE8A9F8	2019-04-12 03:34:03.140361+00	2019-04-12 03:38:39.330131+00	\N	\N	(0,0)	0	fab572ae-5477-4d4c-adb7-fac4ec7685f7
+\\x0000000000000888	2019-04-12 03:34:03.140361+00	2019-04-12 03:38:39.330131+00	\N	\N	(0,0)	0	fab572ae-5477-4d4c-adb7-fac4ec7685f7
 \.
 
 
