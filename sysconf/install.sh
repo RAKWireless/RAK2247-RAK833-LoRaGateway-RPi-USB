@@ -5,7 +5,7 @@ set -e
 
 
 if [ $UID != 0 ]; then
-    echo_error "Operation not permitted. Forgot sudo?"
+    echo "Operation not permitted. Forgot sudo?"
     exit 1
 fi
 
