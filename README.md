@@ -1,6 +1,12 @@
+# 
+# 
+# 
+# 
 # This repository is no longer supported and updated, For new versions, please go to [rak_common_for_gateway](https://github.com/RAKWireless/rak_common_for_gateway)
-
-
+# 
+# 
+# 
+# 
 
 # RAK2247&RAK833-LoRaGateway-RPi-USB
 
